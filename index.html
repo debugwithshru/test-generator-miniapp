@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Generate Test</title>
+    <!-- Telegram Web App script -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <img src="./logo.webp" alt="Classes Logo" class="logo">
+            <h1>Test Generator</h1>
+            <p>Fill the details below to generate your test.</p>
+        </header>
+
+        <form id="testForm" class="test-form">
+            <div class="form-group">
+                <label>Target Audience</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="targetAudience" value="all" checked>
+                        <span>All Students</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="targetAudience" value="specific">
+                        <span>Specific Student</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group" id="studentNameGroup" style="display: none;">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" name="studentName" placeholder="Enter student name">
+            </div>
+
+            <div class="form-group">
+                <label for="numQuestions">Number of Questions Wanted</label>
+                <input type="number" id="numQuestions" name="numQuestions" min="1" required placeholder="e.g. 10">
+            </div>
+
+            <div class="form-group">
+                <label for="conceptIds">Micro-concept IDs (comma-separated)</label>
+                <input type="text" id="conceptIds" name="conceptIds" required placeholder="e.g. math1, math2, physics3">
+            </div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">Generate Test</button>
+        </form>
+
+        <div id="successMessage" class="success-message" style="display: none;">
+            Submission successful! Please wait for 2 minutes.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
