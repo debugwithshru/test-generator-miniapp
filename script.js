@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Copy the 'Test URL' or 'Production URL' from your n8n Webhook node.
         // It should look something like: 'https://your-n8n.com/webhook/1234-abcd-5678'
         // ---------------------------------------------------------------------------------
-        const n8nWebhookUrl = 'https://joseph-unkidnapped-derangedly.ngrok-free.dev/webhook/ff424c15-f767-4c82-a6c1-dcccfbf4d70a';
+        const n8nWebhookUrl = 'https://joseph-unkidnapped-derangedly.ngrok-free.dev/webhook-test/ff424c15-f767-4c82-a6c1-dcccfbf4d70a';
 
         const audience = document.querySelector('input[name="targetAudience"]:checked').value;
         const studentName = document.getElementById('studentName').value.trim();
@@ -111,4 +111,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
