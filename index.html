@@ -20,7 +20,25 @@
 
         <form id="testForm" class="test-form">
             <div class="form-group">
-                <label>Target Audience</label>
+                <label>Grade (Select multiple) <span class="required-asterisk">*</span></label>
+                <div class="radio-group" id="gradeGroup">
+                    <label>
+                        <input type="checkbox" name="studentGrade" value="8">
+                        <span>8</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="studentGrade" value="9">
+                        <span>9</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="studentGrade" value="10">
+                        <span>10</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Target Audience <span class="required-asterisk">*</span></label>
                 <div class="radio-group">
                     <label>
                         <input type="radio" name="targetAudience" value="all" checked>
@@ -33,19 +51,21 @@
                 </div>
             </div>
 
-            <div class="form-group" id="studentNameGroup" style="display: none;">
-                <label for="studentName">Student Name</label>
-                <input type="text" id="studentName" name="studentName" placeholder="Enter student name">
+            <div class="form-group error-container" id="studentIdGroup" style="display: none;">
+                <label>Select Roll No.s <span class="required-asterisk">*</span></label>
+                <div class="search-container">
+                    <input type="text" id="rollNoSearch" placeholder="Search Roll No...">
+                </div>
+                <div id="rollNoList" class="rollno-list">
+                    <!-- Checkboxes will be injected here via script.js -->
+                </div>
             </div>
 
             <div class="form-group">
-                <label for="numQuestions">Number of Questions Wanted</label>
-                <input type="number" id="numQuestions" name="numQuestions" min="1" required placeholder="e.g. 10">
-            </div>
-
-            <div class="form-group">
-                <label for="conceptIds">Micro-concept IDs (comma-separated)</label>
-                <input type="text" id="conceptIds" name="conceptIds" required placeholder="e.g. math1, math2, physics3">
+                <label>Select Concepts <span class="required-asterisk">*</span></label>
+                <div id="taxonomyContainer" class="taxonomy-container">
+                    <!-- Dynamic check lists will be injected here via scripts.js -->
+                </div>
             </div>
 
             <button type="submit" id="submitBtn" class="submit-btn">Generate Test</button>
